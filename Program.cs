@@ -16,6 +16,8 @@ namespace PerformanceTesting
                 Console.WriteLine("    1. Errors Throw VS. Errors Return");
                 Console.WriteLine("    2. Classes VS. Structs");
                 Console.WriteLine("    3. String VS. StringBuilder");
+                Console.WriteLine("    4. For VS. ForEach");
+                Console.WriteLine("    5. Property VS. Member");
                 Console.Write("> ");
 
                 switch(Console.ReadKey().KeyChar) 
@@ -34,6 +36,16 @@ namespace PerformanceTesting
                         Console.WriteLine();
                         Console.WriteLine(Utils.Seperator);
                         StringVSStringBuilder.RunTest();
+                        break;
+                    case '4':
+                        Console.WriteLine();
+                        Console.WriteLine(Utils.Seperator);
+                        ForVSForEach.RunTest();
+                        break;
+                    case '5':
+                        Console.WriteLine();
+                        Console.WriteLine(Utils.Seperator);
+                        PropertyVSMember.RunTest();
                         break;
                     default:
                         loop = false;

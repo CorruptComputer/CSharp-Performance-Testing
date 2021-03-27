@@ -9,9 +9,8 @@ namespace PerformanceTesting.TestCases
         {
             if (str == null)
             {
-                throw new ArgumentNullException("str1", "str1 cannot be null!");
+                throw new ArgumentNullException("str", "str cannot be null!");
             }
-
 
             return str + "foo";
         }

@@ -8,6 +8,8 @@ This project was started out of my own curiosity at work as to why a certain are
 - String VS. StringBuilder
   - Concatanation (small & large)
   - Replacements  (small & large)
+- For VS. ForEach
+- Property VS. Member
 
 ## Running
 Install .NET 5 for your Operating System, instructions can be found here: https://dotnet.microsoft.com/download/dotnet/5.0
