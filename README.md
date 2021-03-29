@@ -1,14 +1,14 @@
 # C# Performance Testing
 ## Summary
-This project was started out of my own curiosity at work as to why a certain area of our application was performing badly. I have since extended it to add other test cases and small explainations as to why these numbers happen the way they do.
+This project was started out of my own curiosity at work as to why a certain area of our application was performing badly. I have since extended it to add other test cases and small explanations as to why these numbers happen the way they do.
 
-Don't have time to download and run it? Heres the TLDR of the tests:
-- Errors Throw VS. Errors Return
+Don't have time to download and run it? Here's the TLDR of the tests:
+- Failures Throw VS. Failures Return
   - **TLDR:** Throwing on a recoverable error is a LOT higher of a runtime cost.
 - Classes VS. Structs
   - **TLDR:** If you are using a Class as only a data structure without any methods it has a higher runtime cost than Structs.
 - String VS. StringBuilder
-  - Concatanation (small & large)
+  - Concatenation (small & large)
     - **TLDR:** StringBuilder is a LOT faster than Strings, even for small iteration counts.
   - Replacements  (small & large)
     - **TLDR:** Strings are about twice as fast than StringBuilders for character replacements.

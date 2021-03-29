@@ -3,7 +3,7 @@ using PerformanceTesting.Util;
 
 namespace PerformanceTesting.TestCases 
 {
-    public static class ErrorsThrowVSErrorsReturn 
+    public static class FailuresThrowVSFailuresReturn 
     {
         public static string ErrorThrows(string str) 
         {

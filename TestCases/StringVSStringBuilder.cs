@@ -13,10 +13,10 @@ namespace PerformanceTesting.TestCases
             // String VS. StringBuilder Concatination for small iteration counts. Loops through letters a-z.
             Console.WriteLine("# Starting 'String Concat Small' performance test...");
             start = DateTime.Now;
-            string testStr1 = "";
+            string testStrSmall = "";
             for (int i = 0; i < 10; i++)
             {
-                testStr1 += (char)('a' + i % 26);
+                testStrSmall += (char)('a' + i % 26);
             }
             end = DateTime.Now;
             Console.WriteLine("# Done. For 10 iterations it took: " + Utils.GetFormattedDuration(start, end));
@@ -25,12 +25,12 @@ namespace PerformanceTesting.TestCases
 
             Console.WriteLine("# Starting 'StringBuilder Concat Small' performance test...");
             start = DateTime.Now;
-            StringBuilder testStrBuilder1 = new StringBuilder();
+            StringBuilder testStrBuilderSmall = new StringBuilder();
             for (int i = 0; i < 10; i++)
             {
-                testStrBuilder1.Append((char)('a' + i % 26));
+                testStrBuilderSmall.Append((char)('a' + i % 26));
             }
-            string result1 = testStrBuilder1.ToString();
+            string result1 = testStrBuilderSmall.ToString();
             end = DateTime.Now;
             Console.WriteLine("# Done. For 10 iterations it took: " + Utils.GetFormattedDuration(start, end));
 
@@ -50,7 +50,7 @@ namespace PerformanceTesting.TestCases
             start = DateTime.Now;
             for (int i = 0; i < 26; i++)
             {
-                testStr1.Replace((char)('a' + i % 26), '-');
+                testStrSmall.Replace((char)('a' + i % 26), '-');
             }
             end = DateTime.Now;
             Console.WriteLine("# Done. For 26 iterations it took: " + Utils.GetFormattedDuration(start, end));
@@ -59,11 +59,11 @@ namespace PerformanceTesting.TestCases
 
             Console.WriteLine("# Starting 'StringBuilder Replace Small' performance test...");
             start = DateTime.Now;
-            for (int i = 0; i < 100000; i++)
+            for (int i = 0; i < 26; i++)
             {
-                testStrBuilder1.Replace((char)('a' + i % 26), '-');
+                testStrBuilderSmall.Replace((char)('a' + i % 26), '-');
             }
-            string result2 = testStrBuilder1.ToString();
+            string result2 = testStrBuilderSmall.ToString();
             end = DateTime.Now;
             Console.WriteLine("# Done. For 26 iterations it took: " + Utils.GetFormattedDuration(start, end));
             
@@ -77,10 +77,10 @@ namespace PerformanceTesting.TestCases
             // String VS. StringBuilder Concatination for large iteration counts. Loops through letters a-z.
             Console.WriteLine("# Starting 'String Concat Large' performance test...");
             start = DateTime.Now;
-            string testStr2 = "";
+            string testStrLarge = "";
             for (int i = 0; i < 100000; i++)
             {
-                testStr2 += (char)('a' + i % 26);
+                testStrLarge += (char)('a' + i % 26);
             }
             end = DateTime.Now;
             Console.WriteLine("# Done. For 100,000 iterations it took: " + Utils.GetFormattedDuration(start, end));
@@ -89,12 +89,12 @@ namespace PerformanceTesting.TestCases
 
             Console.WriteLine("# Starting 'StringBuilder Concat Large' performance test...");
             start = DateTime.Now;
-            StringBuilder testStrBuilder2 = new StringBuilder();
+            StringBuilder testStrBuilderLarge = new StringBuilder();
             for (int i = 0; i < 100000; i++)
             {
-                testStrBuilder2.Append((char)('a' + i % 26));
+                testStrBuilderLarge.Append((char)('a' + i % 26));
             }
-            string result3 = testStrBuilder2.ToString();
+            string result3 = testStrBuilderLarge.ToString();
             end = DateTime.Now;
             Console.WriteLine("# Done. For 100,000 iterations it took: " + Utils.GetFormattedDuration(start, end));
             
@@ -115,7 +115,7 @@ namespace PerformanceTesting.TestCases
             start = DateTime.Now;
             for (int i = 0; i < 26; i++)
             {
-                testStr2.Replace((char)('a' + i % 26), '-');
+                testStrLarge.Replace((char)('a' + i % 26), '-');
             }
             end = DateTime.Now;
             Console.WriteLine("# Done. For 26 iterations it took: " + Utils.GetFormattedDuration(start, end));
@@ -126,9 +126,9 @@ namespace PerformanceTesting.TestCases
             start = DateTime.Now;
             for (int i = 0; i < 26; i++)
             {
-                testStrBuilder2.Replace((char)('a' + i % 26), '-');
+                testStrBuilderLarge.Replace((char)('a' + i % 26), '-');
             }
-            string result4 = testStrBuilder2.ToString();
+            string result4 = testStrBuilderLarge.ToString();
             end = DateTime.Now;
             Console.WriteLine("# Done. For 26 iterations it took: " + Utils.GetFormattedDuration(start, end));
 

@@ -13,7 +13,7 @@ namespace PerformanceTesting
             {
                 Console.Clear();
                 Console.WriteLine("Please choose a performance test to run, or press any other key to exit.");
-                Console.WriteLine("    1. Errors Throw VS. Errors Return");
+                Console.WriteLine("    1. Failures Throw VS. Failures Return");
                 Console.WriteLine("    2. Classes VS. Structs");
                 Console.WriteLine("    3. String VS. StringBuilder");
                 Console.WriteLine("    4. For VS. ForEach");
@@ -25,7 +25,7 @@ namespace PerformanceTesting
                     case '1':
                         Console.WriteLine();
                         Console.WriteLine(Utils.Seperator);
-                        ErrorsThrowVSErrorsReturn.RunTest();
+                        FailuresThrowVSFailuresReturn.RunTest();
                         break;
                     case '2':
                         Console.WriteLine();
