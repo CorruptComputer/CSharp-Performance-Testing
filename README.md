@@ -4,26 +4,26 @@ This project was started out of my own curiosity at work as to why a certain are
 
 Don't have time to download and run it? Here's the TLDR of the tests:
 - Failures Throw VS. Failures Return
-  - **TLDR:** Throwing on a recoverable error is a LOT higher of a runtime cost.
+  - **TLDR:** Throwing on a recoverable error is a LOT higher of a runtime cost.<br />
     ![image](https://user-images.githubusercontent.com/5573038/112841096-14851380-906e-11eb-87a8-31737b7dea7c.png)
 - Classes VS. Structs
-  - **TLDR:** If you are using a Class as only a data structure without any methods it has a higher runtime cost than Structs.
+  - **TLDR:** If you are using a Class as only a data structure without any methods it has a higher runtime cost than Structs.<br />
     ![image](https://user-images.githubusercontent.com/5573038/112841242-41d1c180-906e-11eb-8712-9b82d490406d.png)
 - String VS. StringBuilder
   - Concatenation (small & large)
-    - **TLDR:** StringBuilder is a LOT faster than Strings, even for small iteration counts.
+    - **TLDR:** StringBuilder is a LOT faster than Strings, even for small iteration counts.<br />
       ![image](https://user-images.githubusercontent.com/5573038/112841311-557d2800-906e-11eb-842b-437e5b8c17df.png)
       ![image](https://user-images.githubusercontent.com/5573038/112841358-6168ea00-906e-11eb-8e40-888ec10c3d5b.png)
   - Replacements  (small & large)
-    - **TLDR:** Strings are about twice as fast than StringBuilders for character replacements.
+    - **TLDR:** Strings are about twice as fast than StringBuilders for character replacements.<br />
       ![image](https://user-images.githubusercontent.com/5573038/112841404-6d54ac00-906e-11eb-8018-ff43b3ecfc38.png)
       ![image](https://user-images.githubusercontent.com/5573038/112841436-78a7d780-906e-11eb-951d-d93d79cc11ee.png)
 - For VS. ForEach
-  - **TLDR:** There seems to be almost no difference in the runtime of For and ForEach and the time with vary from run to run.
+  - **TLDR:** There seems to be almost no difference in the runtime of For and ForEach and the time with vary from run to run.<br />
     ![image](https://user-images.githubusercontent.com/5573038/112841511-8eb59800-906e-11eb-9a79-2a40ef468d81.png)
     ![image](https://user-images.githubusercontent.com/5573038/112841536-98d79680-906e-11eb-85c9-339161533d40.png)
 - Property VS. Member
-  - **TLDR:** Properties are a decent amount slower than Members due to the additional overhead for the method calls.
+  - **TLDR:** Properties are a decent amount slower than Members due to the additional overhead for the method calls.<br />
     ![image](https://user-images.githubusercontent.com/5573038/112841590-aab93980-906e-11eb-87fd-63144ad765b4.png)
 
 The speeds shown in the Screenshot were run on an "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz" CPU.
