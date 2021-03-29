@@ -29,7 +29,7 @@ namespace PerformanceTesting.TestCases
         {
             DateTime start, end;
 
-            Console.WriteLine("# Starting 'Error Throws' performance test...");
+            Console.WriteLine("# Starting 'Failure Throws' performance test...");
             start = DateTime.Now;
             for (int i = 0; i < 100000; i++)
             {
@@ -47,7 +47,7 @@ namespace PerformanceTesting.TestCases
             Console.WriteLine();
 
 
-            Console.WriteLine("# Starting 'Error Returns' performance test...");
+            Console.WriteLine("# Starting 'Failure Returns' performance test...");
             start = DateTime.Now;
             for (int i = 0; i < 100000; i++)
             {
