@@ -9,7 +9,7 @@ namespace PerformanceTesting.TestCases
         {
             if (str == null)
             {
-                throw new ArgumentNullException("str", "str cannot be null!");
+                throw new ArgumentNullException(nameof(str), "str cannot be null!");
             }
 
             return str + "foo";
@@ -60,16 +60,6 @@ namespace PerformanceTesting.TestCases
             }
             end = DateTime.Now;
             Console.WriteLine("# Done. For 100,000 iterations it took: " + Utils.GetFormattedDuration(start, end));
-
-            Console.WriteLine();
-            Console.WriteLine("Throwing Exceptions in C# is very costly in terms of run \n"
-                              + "time. This additional overhead can have a massive impact on \n"
-                              + "runtime of your application. Keeping Exceptions to an \n"
-                              + "absolute minimum should be a priority if performance is \n"
-                              + "important. Instead of throwing an exception when something \n"
-                              + "isn't quite right but the application can still continue to \n"
-                              + "run anyways is a lot better of a design than throwing and \n"
-                              + "catching Exceptions.");
         }
     }
 }

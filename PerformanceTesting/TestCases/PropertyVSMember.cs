@@ -25,7 +25,7 @@ namespace PerformanceTesting.TestCases
             start = DateTime.Now;
             for (int i = 0; i < 100000000; i++)
             {
-                PersonProperty person = new PersonProperty() 
+                PersonProperty person = new() 
                 {
                     FirstName = "Nickolas",
                     LastName = "Gupton",
@@ -36,12 +36,11 @@ namespace PerformanceTesting.TestCases
             Console.WriteLine("# Done. For 100,000,000 iterations it took: " + Utils.GetFormattedDuration(start, end));
             Console.WriteLine();
             
-
             Console.WriteLine("# Starting 'Member' performance test...");
             start = DateTime.Now;
             for (int i = 0; i < 100000000; i++)
             {
-                PersonMember person = new PersonMember() 
+                PersonMember person = new() 
                 {
                     FirstName = "Nickolas",
                     LastName = "Gupton",
@@ -50,12 +49,6 @@ namespace PerformanceTesting.TestCases
             }
             end = DateTime.Now;
             Console.WriteLine("# Done. For 100,000,000 iterations it took: " + Utils.GetFormattedDuration(start, end));
-
-
-            Console.WriteLine();
-            Console.WriteLine("Using Members instead of Properties can lead to a decent \n"
-                              + "speed increase since there is not the additional overhead \n"
-                              + "associated with the method calls for the getters and setters.");
         }
     }
 }

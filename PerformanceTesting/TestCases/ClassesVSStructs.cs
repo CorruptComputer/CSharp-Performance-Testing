@@ -25,7 +25,7 @@ namespace PerformanceTesting.TestCases
             start = DateTime.Now;
             for (int i = 0; i < 100000000; i++)
             {
-                PersonClass person = new PersonClass() 
+                PersonClass person = new() 
                 {
                     FirstName = "Nickolas",
                     LastName = "Gupton",
@@ -41,7 +41,7 @@ namespace PerformanceTesting.TestCases
             start = DateTime.Now;
             for (int i = 0; i < 100000000; i++)
             {
-                PersonStruct person = new PersonStruct() 
+                PersonStruct person = new() 
                 {
                     FirstName = "Nickolas",
                     LastName = "Gupton",
@@ -50,15 +50,6 @@ namespace PerformanceTesting.TestCases
             }
             end = DateTime.Now;
             Console.WriteLine("# Done. For 100,000,000 iterations it took: " + Utils.GetFormattedDuration(start, end));
-
-            Console.WriteLine();
-            Console.WriteLine("In C# it is a common design practice to hold multiple pieces \n"
-                              + "of data in a single container Class that has no methods \n"
-                              + "associated with it. These can be changed to use a Struct \n"
-                              + "in order to gain additional performance from your \n"
-                              + "application. Classes have additional overhead associated \n"
-                              + "with their creation that Structs do not, which leads to a \n"
-                              + "performance difference between the two.");
         }
     }
 }

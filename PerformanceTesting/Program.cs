@@ -18,6 +18,7 @@ namespace PerformanceTesting
                 Console.WriteLine("    3. String VS. StringBuilder");
                 Console.WriteLine("    4. For VS. ForEach");
                 Console.WriteLine("    5. Property VS. Member");
+                Console.WriteLine("    6. Key/Value Pair Types");
                 Console.Write("> ");
 
                 switch(Console.ReadKey().KeyChar) 
@@ -46,6 +47,11 @@ namespace PerformanceTesting
                         Console.WriteLine();
                         Console.WriteLine(Utils.Seperator);
                         PropertyVSMember.RunTest();
+                        break;
+                    case '6':
+                        Console.WriteLine();
+                        Console.WriteLine(Utils.Seperator);
+                        KeyValuePairTypes.RunTest();
                         break;
                     default:
                         loop = false;

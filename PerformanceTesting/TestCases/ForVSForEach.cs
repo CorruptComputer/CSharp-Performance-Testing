@@ -37,8 +37,7 @@ namespace PerformanceTesting.TestCases
             }
             end = DateTime.Now;
             Console.WriteLine("# Done. For 100,000,000 iterations it took: " + Utils.GetFormattedDuration(start, end));
-
-            Console.WriteLine(Utils.Seperator);
+            Console.WriteLine();
 
             Console.WriteLine("# Starting 'List For' performance test...");
             start = DateTime.Now;
@@ -50,7 +49,6 @@ namespace PerformanceTesting.TestCases
             Console.WriteLine("# Done. For 100,000,000 iterations it took: " + Utils.GetFormattedDuration(start, end));
             Console.WriteLine();
 
-
             Console.WriteLine("# Starting 'List ForEach' performance test...");
             start = DateTime.Now;
             foreach (int i in intArray)
@@ -59,12 +57,6 @@ namespace PerformanceTesting.TestCases
             }
             end = DateTime.Now;
             Console.WriteLine("# Done. For 100,000,000 iterations it took: " + Utils.GetFormattedDuration(start, end));
-
-
-
-            Console.WriteLine();
-            Console.WriteLine("The difference between For and ForEach loops are negligable, \n"
-                              + "and will vary from run to run on which is faster.");
         }
     }
 }
